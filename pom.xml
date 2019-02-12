@@ -45,6 +45,25 @@
         </profile>
     </profiles>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <spring.profiles.to.activate>dev</spring.profiles.to.activate>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <activation>
+                <!-- Default to dev so we avoid any accidents with prod! :) -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.to.activate>prod</spring.profiles.to.activate>
+            </properties>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
