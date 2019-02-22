@@ -1,0 +1,12 @@
+[Unit]
+Description = Admin Service
+After network.target = admin-service.service
+
+[Service]
+Type = forking
+ExecStart = /usr/local/bin/admin-service.sh start
+ExecStop = /usr/local/bin/admin-service.sh stop
+ExecReload = /usr/local/bin/admin-service.sh reload
+
+[Install]
+WantedBy=multi-user.target
