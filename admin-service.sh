@@ -1,6 +1,6 @@
 #!/bin/sh
 SERVICE_NAME=admin-service
-PATH_TO_JAR=/home/local/MyProject/MyJar.jar
+PATH_TO_JAR=/home/TFG-Microservices-Admin-Service/target/admin-service-1.0-SNAPSHOT.jar
 PID_PATH_NAME=/tmp/admin-service-pid
 case $1 in
     start)
